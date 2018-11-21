@@ -1,14 +1,15 @@
 {
   "builders": [{
     "type": "docker",
-    "image": "ubuntu:xenial",
+    "image": "nikcbg/xenial64",
     "commit": "true"
   }],
  "provisioners": [
     {
       "type": "shell",
       "inline": [
-        "sudo apt-get install -y nginx"
+        "sudo apt-get -y update"
+        "sudo apt-get -y install -y nginx"
       ]
     }
   ],
