@@ -16,7 +16,7 @@
     [
       {
         "type": "docker-tag",
-        "repository": "nikcbg/nginx64",
+        "repository": "nginx64",
         "tag": "0.1"
       }
     ]
