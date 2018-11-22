@@ -9,7 +9,7 @@ platforms:
   - name: default-nginx
     driver:
       box: nginx:0.1
-      provider: ubuntu
+      provider: xenial64
  
 verifier:
   name: inspec
