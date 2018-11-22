@@ -8,7 +8,7 @@ provisioner:
 platforms:
   - name: default-nginx
     driver:
-      box: nginx
+      box: nginx:0.1
       provider: ubuntu
  
 verifier:
