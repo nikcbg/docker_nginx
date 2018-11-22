@@ -10,7 +10,7 @@ provisioner:
 
 platforms:
   - name: docker/nginx
-    image: nikcbg/nginx:0.1
+    image: nikcbg/nginx64
     
 verifier:
   name: inspec
