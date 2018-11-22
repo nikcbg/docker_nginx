@@ -10,13 +10,13 @@ File name                            | File description
 `scripts/provision.sh` | script that installs Ubuntu-xenial.
 `.gitignore` | which files and directories to ignore in the repository.
 `Vagrantfile` | file with sript that isntalls `docker` and `packer` on the Ubuntu-xenial VM.
+`template.json` | template with code for `packer` tool to create `docker` image and install `nginx`.
 
 ### How to use this repository. 
 - Install `virtualbox` by following this [instructions](https://www.virtualbox.org/wiki/Downloads).
 - Install `vagrant` by following this [instructions](https://www.vagrantup.com/docs/installation/).
-
-- Clone the repository to your local computer: `git clone git@github.com:nikcbg/xenial_docker.git`.
-- Go to the cloned repo on your computer: `cd xenial_docker`.
+- Clone the repository to your local computer: `git clone git@github.com:nikcbg/docker_nginx.git`.
+- Go to the cloned repo on your computer: `cd docker_nginx`.
 - After that execute the commands in the table below.
 
 Command execution                    | Command outcome
@@ -37,17 +37,13 @@ Command execution                    | Command outcome
 ```
 Docker version 17.03.2-ce, build f5ec1e2
 ```
+- You need to be logged into your VM (`vagrant ssh`) to be able to build the `docker` image  with `packer` and run `kitchen` tests.
+- After you login to the VM execute `cd /vagrant` to work in the `vagrant` directory.
 
+### Creating and configuring the `docker` image.
+- Execute `packer validate template.json` to validate the template.
+- Execute `packer build template.json` to start building the `docker` image. 
 
-### Commands needed to test with `kitchen`.
-
-Command execution                    | Command outcome
------------------------------------- | --------------------------------------------------------------
-`bundle exec kitchen list` | to list `kitchen` instances.
-`bundle exec kitchen converge` | to create `kitchen` environment.
-`bundle exec kitchen verify` | command to execute `kitchen` test.
-`bundle exec kitchen destroy` | to destroy `kitchen` environment.
-`bundle exec kitchen test` | to automatically build, test and destroy `kitchen` environment.
 
 ### TO DO:
 - Check if `nginx` server is installed and running. 
