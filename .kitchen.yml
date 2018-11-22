@@ -1,5 +1,7 @@
+---
 driver:
   name: docker
+  use_sudo: false
 
 provisioner:
   name: chef_zero
@@ -12,15 +14,22 @@ verifier:
   name: inspec
 
 platforms:
-  - name: debian
+  - name: ubuntu-16.04
     driver_config:
-      image: debian:jessie
+      run_command: /bin/systemd
+      privileged: true
+  - name: centos-7
+    driver_config:
+      run_command: /usr/sbin/init
+      privileged: true
+      provision_command:
+        - systemctl enable sshd.service
 
 suites:
   - name: default
     run_list:
-      - recipe[cookbook::default]
+      - recipe[custom_nginx::default]
     verifier:
       inspec_tests:
-        - test/smoke/default
+        - test/integration/default
     attributes:
