@@ -6,7 +6,7 @@ provisioner:
   name: shell
 
 platforms:
-  - name:docker/nginx
+  - name: docker/nginx
     driver:
       box: nginx:0.1
       provider: docker
