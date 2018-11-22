@@ -6,9 +6,9 @@ provisioner:
   name: shell
 
 platforms:
-  - name: docker/nginx64
+  - name: docker/nginx
     driver:
-      box: nginx64
+      box: nginx
       provider: ubuntu
  
 verifier:
