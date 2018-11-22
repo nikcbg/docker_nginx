@@ -11,6 +11,9 @@ File name                            | File description
 `.gitignore` | which files and directories to ignore in the repository.
 `Vagrantfile` | file with sript that isntalls `docker` and `packer` on the Ubuntu-xenial VM.
 `template.json` | template with code for `packer` tool to create `docker` image and install `nginx`.
+`test/integration/default/check_pkg.rb` | script needed by kitchen to check if `nginx` is installed.
+`.kitchen.yml` | configuration file for `kitchen`.
+`Gemfile` | used for ruby dependencies.
 
 ### How to use this repository. 
 - Install `virtualbox` by following this [instructions](https://www.virtualbox.org/wiki/Downloads).
