@@ -6,7 +6,7 @@ provisioner:
   name: shell
 
 platforms:
-  - name: docker/nginx64
+  - name: xenial64
     driver:
       box: nginx:0.1
       provider: ubuntu
