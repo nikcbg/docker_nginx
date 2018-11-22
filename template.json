@@ -9,7 +9,8 @@
       "type": "shell",
       "inline": [
         "apt-get -y update",
-        "apt-get -y install -y nginx"
+        "apt-get -y install -y nginx",
+        "apt-get clean"
       ]
     }
   ],
