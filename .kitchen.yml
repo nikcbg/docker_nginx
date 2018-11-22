@@ -3,7 +3,7 @@ driver:
   name: docker
 
 provisioner:
-  name: shell
+  name: dummy
 
 platforms:
   - name: ubuntu-16.04
