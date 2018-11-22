@@ -9,7 +9,7 @@ platforms:
   - name: docker/nginx64
     driver:
       box: nginx64
-      provider: ubuntu-1604
+      provider: ubuntu
  
 verifier:
   name: inspec
