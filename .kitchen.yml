@@ -9,8 +9,8 @@ provisioner:
   name: chef_zero
 
 platforms:
-  - name: centos
-    image: centos:7
+  - name: nginx
+    image: nginx:7
 
 suites:
   - name: default
