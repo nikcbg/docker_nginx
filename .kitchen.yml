@@ -9,8 +9,11 @@ provisioner:
   name: chef_zero
 
 platforms:
-  - name: nginx
-    image: nginx:7
+  - name: docker/nginx
+    image: nikcbg/nginx:0.1
+    
+verifier:
+  name: inspec
 
 suites:
   - name: default
