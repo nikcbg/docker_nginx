@@ -1,28 +1,17 @@
+---
 driver:
   name: docker
-  docker: /usr/bin/docker
-  use_sudo: false
-
-  customize:
-    memory: 2048
-    natdnshostresolver1: "on"
-
-config:
-  ssl_verify_mode :verify_peer
-
+  
 provisioner:
-  name: chef_zero
-  solo_rb:
-    ssl_verify_mode: verify_peer
-  roles_path: /home/ivan/workspace/operations/chef/roles
-  data_bags_path: /home/ivan/workspace/operations/chef/data_bags
+  name: shell
 
 platforms:
-  - name: ubuntu-14.04
+  - name: docker/nginx
+    image: nginx:0.1
+    
+verifier:
+  - name: inspec
 
 suites:
-  - name: motd
-    run_list:
-       - recipe[apt]
-       - recipe[motd]
-    attributes:
+  - name: default
+    
