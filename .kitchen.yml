@@ -6,10 +6,10 @@ provisioner:
   name: shell
 
 platforms:
-  - name: docker/nginx
+  - name: nginx
     driver:
       box: nginx:0.1
-      provider: ubuntu
+      provider: virtualbox
  
 verifier:
   name: inspec
