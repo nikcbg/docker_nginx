@@ -4,16 +4,13 @@ driver:
   use_sudo: false
   privileged: true
   run_command: /usr/sbin/init
-  
+
 provisioner:
   name: chef_zero
 
 platforms:
-  - name: nginx
-    image: nginx:0.1
-        
-verifier:
-  name: inspec
+  - name: centos
+    image: centos:7
 
 suites:
   - name: default
