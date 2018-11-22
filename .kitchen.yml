@@ -1,18 +1,21 @@
 ---
 driver:
   name: docker
+  name: docker
+  use_sudo: false
+  privileged: true
+  run_command: /usr/sbin/init
   
 provisioner:
   name: shell
 
 platforms:
-  - name: docker/nginx
-    driver:
-      box: nginx:0.1
-      provider: docker
-    
+  - name: nginx
+    image: nginx:0.1
+        
 verifier:
   name: inspec
 
 suites:
   - name: default
+    run_list: []
