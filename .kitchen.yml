@@ -6,7 +6,7 @@ provisioner:
   name: shell
 
 platforms:
-  - name: nginx
+  - name: default-nginx
     driver:
       box: nginx:0.1
       provider: ubuntu
