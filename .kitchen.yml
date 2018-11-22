@@ -6,8 +6,10 @@ provisioner:
   name: dummy
 
 platforms:
-  - name: ubuntu-16.04
-    image: nginx:0.1
+  - name: ubuntu
+    driver:
+      image: nginx:0.1
+      platform: ubuntu
     
 verifier:
   name: inspec
