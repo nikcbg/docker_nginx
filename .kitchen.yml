@@ -6,9 +6,9 @@ provisioner:
   name: shell
 
 platforms:
-  - name: default-nginx
+  - name: ubuntu/nginx
     driver:
-      box: nginx:0.1
+      box: nginx
       provider: virtualbox
  
 verifier:
