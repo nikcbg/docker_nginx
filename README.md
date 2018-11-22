@@ -53,6 +53,24 @@ Build 'docker' finished.
 --> docker: Imported Docker image: nginx:0.1
 ```
 
+### Setting up `ruby` environment on Ubuntu 16.04 instructions:
+
+-
+-
+-
+-
+-
+
+
+### Commands needed to test with `kitchen`.
+
+Command execution                    | Command outcome
+------------------------------------ | --------------------------------------------------------------
+`bundle exec kitchen list` | to list `kitchen` instances.
+`bundle exec kitchen converge` | to create `kitchen` environment.
+`bundle exec kitchen verify` | command to execute `kitchen` test.
+`bundle exec kitchen destroy` | to destroy `kitchen` environment.
+`bundle exec kitchen test` | to automatically build, test and destroy `kitchen` environment.
 
 ### TO DO:
 - Check if `nginx` server is installed and running. 
