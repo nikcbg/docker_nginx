@@ -6,7 +6,7 @@ provisioner:
   name: shell
 
 platforms:
-  - name: vbox/nginx
+  - name: ubuntu
     driver:
       box: nginx
       provider: virtualbox
