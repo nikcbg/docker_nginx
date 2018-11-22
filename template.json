@@ -8,8 +8,8 @@
     {
       "type": "shell",
       "inline": [
-        "sudo apt-get -y update",
-        "sudo apt-get -y install -y nginx"
+        "apt-get -y update",
+        "apt-get -y install -y nginx"
       ]
     }
   ],
