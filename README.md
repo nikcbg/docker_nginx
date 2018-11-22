@@ -24,11 +24,10 @@ File name                            | File description
 
 Command execution                    | Command outcome
 ------------------------------------ | --------------------------------------------------------------
-`vagrant box list` | to see the list of `vagrant` boxes.
-`vagrant init xenial` | to create Vagrantfile if one doesn't already exist.  
 `vagrant up` | to power up the xenial VM.
 `vagrant ssh` | to log in to the xenial VM.
 
+- You need to be logged into your VM (`vagrant ssh`) to be able to build the `docker` image  with `packer` and run `kitchen` tests.
 - Execute `packer -v` to see if `packer` is installed and its version, the output will display the following:
 
 ```
@@ -40,7 +39,7 @@ Command execution                    | Command outcome
 ```
 Docker version 17.03.2-ce, build f5ec1e2
 ```
-- You need to be logged into your VM (`vagrant ssh`) to be able to build the `docker` image  with `packer` and run `kitchen` tests.
+
 - After you login to the VM execute `cd /vagrant` to work in the `vagrant` directory.
 
 ### Creating and configuring the `docker` image.
