@@ -42,7 +42,14 @@ Docker version 17.03.2-ce, build f5ec1e2
 
 ### Creating and configuring the `docker` image.
 - Execute `packer validate template.json` to validate the template.
-- Execute `packer build template.json` to start building the `docker` image. 
+- Execute `packer build template.json` to start building the `docker` image, successful build output will display the following:
+```
+Build 'docker' finished.
+
+==> Builds finished. The artifacts of successful builds are:
+--> docker: Imported Docker image: sha256:3c16e873e8e57727da17d55f35642d6f4428e2f9bacc3b9b72f97f5150f39301
+--> docker: Imported Docker image: nginx:0.1
+```
 
 
 ### TO DO:
