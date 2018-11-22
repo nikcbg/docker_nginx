@@ -7,11 +7,12 @@ provisioner:
 
 platforms:
   - name: docker/nginx
-    image: nginx:0.1
+    driver:
+      box: nginx:0.1
+      provider: docker
     
 verifier:
-  - name: inspec
+  name: inspec
 
 suites:
   - name: default
-    
