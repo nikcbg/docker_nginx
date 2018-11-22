@@ -1,22 +1,17 @@
 ---
 driver:
   name: docker
+  use_sudo: false
+  privileged: true
+  run_command: /usr/sbin/init
 
 provisioner:
   name: chef_zero
 
-verifier:
-  name: inspec
-
 platforms:
-  - name: centos-7.2
-    driver_config:
-      image: centos:7.2
-      platform: centos
+  - name: centos
+    image: centos:7
 
 suites:
-  - name: zaz
-    run_list:
-      - recipe[foo::bar]
-...
-...
+  - name: default
+    run_list: []
