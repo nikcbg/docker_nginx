@@ -8,8 +8,8 @@ provisioner:
 platforms:
   - name:docker/nginx
     driver:
-      box: nikcbg/nginx:0.1
-      provider: ubuntu
+      box: nginx:0.1
+      provider: virtualbox
  
 verifier:
   name: inspec
