@@ -6,9 +6,9 @@ provisioner:
   name: shell
 
 platforms:
-  - name: docker/nginx
+  - name: nginx
     driver:
-      box: nginx
+      box: docker/nginx
       provider: virtualbox
  
 verifier:
