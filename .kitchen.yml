@@ -9,7 +9,7 @@ platforms:
   - name:docker/nginx
     driver:
       box: nginx:0.1
-      provider: virtualbox
+      provider: docker
  
 verifier:
   name: inspec
