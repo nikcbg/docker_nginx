@@ -6,9 +6,9 @@ provisioner:
   name: shell
 
 platforms:
-  - name: xenial64
+  - name: ubuntu
     driver:
-      box: xenial64
+      box: ubuntu
       provider: virtualbox
  
 verifier:
