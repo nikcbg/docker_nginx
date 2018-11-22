@@ -1,7 +1,7 @@
 {
   "builders": [{
     "type": "docker",
-    "image": "nikcbg/xenial64",
+    "image": "ubuntu:xenial",
     "commit": "true"
   }],
  "provisioners": [
@@ -17,7 +17,7 @@
     [
       {
         "type": "docker-tag",
-        "repository": "nginx64",
+        "repository": "nginx",
         "tag": "0.1"
       }
     ]
