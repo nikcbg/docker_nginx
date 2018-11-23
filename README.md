@@ -104,5 +104,26 @@ Command execution                    | Command outcome
 `bundle exec kitchen destroy` | to destroy `kitchen` environment.
 `bundle exec kitchen test` | to automatically build, test and destroy `kitchen` environment.
 
+- If the command/s complete successfully the output will display the following:
+
+```
+-----> Starting Kitchen (v1.23.2)
+-----> Setting up <default-ubuntu>...
+       Finished setting up <default-ubuntu> (0m0.00s).
+-----> Verifying <default-ubuntu>...
+       Loaded tests from {:path=>".vagrant.test.integration.default"} 
+
+Profile: tests from {:path=>"/vagrant/test/integration/default"} (tests from {:path=>".vagrant.test.integration.default"})
+Version: (not specified)
+Target:  ssh://kitchen@localhost:32789
+
+  System Package nginx
+     ✔  should be installed
+
+Test Summary: 1 successful, 0 failures, 0 skipped
+       Finished verifying <default-ubuntu> (0m0.48s).
+-----> Kitchen is finished. (0m3.07s)
+```
+
 ### TO DO:
 - Check if `nginx` server is installed and running. 
