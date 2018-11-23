@@ -27,7 +27,7 @@ Command execution                    | Command outcome
 `vagrant up` | to power up the xenial VM.
 `vagrant ssh` | to log in to the xenial VM.
 
-- You need to be logged into your VM (`vagrant ssh`) to be able to build the `docker` image  with `packer` and run `kitchen` tests.
+- You need to be logged into your VM (`vagrant ssh`) for the purpose of the project to build the `docker` image  with `packer` and run `kitchen` tests.
 - Execute `packer -v` to make sure `packer` is installed and check its version, the output will display the following:
 
 ```
