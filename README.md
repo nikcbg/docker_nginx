@@ -34,7 +34,7 @@ Command execution                    | Command outcome
 1.3.2
 ```
 
-- Execute `docker -v` to see make sure `packer` is isntalled and check its version, the output will display the following:
+- Execute `docker -v` to see make sure `docker` is isntalled and check its version, the output will display the following:
 
 ```
 Docker version 17.03.2-ce, build f5ec1e2
