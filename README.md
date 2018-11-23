@@ -28,13 +28,13 @@ Command execution                    | Command outcome
 `vagrant ssh` | to log in to the xenial VM.
 
 - You need to be logged into your VM (`vagrant ssh`) to be able to build the `docker` image  with `packer` and run `kitchen` tests.
-- Execute `packer -v` to see if `packer` is installed and its version, the output will display the following:
+- Execute `packer -v` to make sure `packer` is installed and check its version, the output will display the following:
 
 ```
 1.3.2
 ```
 
-- Execute `docker -v` to see if `packer` is isntalled and its version, the output will display the following:
+- Execute `docker -v` to see make sure `packer` is isntalled and check its version, the output will display the following:
 
 ```
 Docker version 17.03.2-ce, build f5ec1e2
@@ -52,15 +52,48 @@ Build 'docker' finished.
 --> docker: Imported Docker image: sha256:3c16e873e8e57727da17d55f35642d6f4428e2f9bacc3b9b72f97f5150f39301
 --> docker: Imported Docker image: nginx:0.1
 ```
+-Once the image is ready you need to set up your testing environment. The testing environment have to be set up on the Ubuntu-xenial VM where you build the `docker` image.
 
-### Setting up `ruby` environment on Ubuntu 16.04 instructions:
+### Setting up `ruby` testing environment on Ubuntu 16.04 instructions:
 
--
--
--
--
--
+- Execute `sudo apt update` to update the packages on your Ubuntu VM.
+- Execute `sudo apt-get install autoconf bison build-essential libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm3 libgdbm-dev` to install `ruby` dependencies.
+- Execute `git clone https://github.com/rbenv/rbenv.git ~/.rbenv` to clone `rbenv` repo. 
+- Execute `echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc` to change your `~/.bashrc` file to use `ruby` command line utility
+- Execute `echo 'eval "$(rbenv init -)"' >> ~/.bashrc` so `rbenv` loads automatically.
+- Execute `source ~/.bashrc` to reload `bash` profile.
+- Execute `type rbenv` command to verify that `rbenv` is set up properly, the output will display the following:
 
+```
+rbenv is a function
+rbenv () 
+{ 
+    typeset command;
+    command="$1";
+    if [ "$#" -gt 0 ]; then
+        shift;
+    fi;
+    case "$command" in 
+        rehash | shell)
+            eval `rbenv "sh-$command" "$@"`
+        ;;
+        *)
+            command rbenv "$command" "$@"
+        ;;
+    esac
+}
+```
+- Next execute execute the commands in teh table below:
+
+Command execution                    | Command outcome
+------------------------------------ | --------------------------------------------------------------
+
+`rbenv install 2.3.1` | to install `ruby 2.3.1` version.
+`rbenv local 2.3.1` | to set the default version of `ruby` to your local directory.
+`rbenv -v` |to make sure `ruby` is installed and you have the correct version.
+`gem install bundler` | to install `gem` which is package manager for `ruby`.
+
+- After this we should have our testing environment set up and ready for testing. 
 
 ### Commands needed to test with `kitchen`.
 
