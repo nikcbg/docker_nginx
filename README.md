@@ -114,6 +114,33 @@ Test Summary: 1 successful, 0 failures, 0 skipped
        Finished verifying <default-ubuntu> (0m0.48s).
 -----> Kitchen is finished. (0m3.07s)
 ```
+### Instructions on how to push the`docker nginx` image we created to Docker hub.
+
+- First you need to create a `dockerhub` account by going to [here](https://hub.docker.com/)
+- Next create a new repository in `dockerhub` by clicking on the blue 'Create Repository" button in the upper right corner of the screen and then give it a new and descriptio. 
+- Next go back to your terminal and execute `docker login` command to login to `dockerhub`, you will be asked for your `dockerhub` username and password which you will need to enter.
+- Next check your `docker` image name by executing `docker images`, the putput will display:
+ ```
+ REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+ nikcbg/nginx64      2018.11.23          3c16e873e8e5        24 hours ago        197 MB
+ nginx               0.1                 3c16e873e8e5        24 hours ago        197 MB`
+```
+- Next you need to tag your image by executing `docker tag nginx:0.1 nikcbg/nginx64:2018.11.23` where:
+        - `nginx:0.1` is your image and tag.
+        - `nikcbg/nginx64:2018.11.23` is your `dockerhun` username and name of your `docker repository` and date.
+- Next you execute `docker push nikcbg/nginx64:2018.11.23` to push your image to `docker` respository.
+- Successful upload will display the following:
+
+```
+The push refers to a repository [docker.io/nikcbg/nginx64]
+9ca443e2cb29: Pushed 
+3db5746c911a: Mounted from library/ubuntu 
+819a824caf70: Mounted from library/ubuntu 
+647265b9d8bc: Mounted from library/ubuntu 
+41c002c8a6fd: Mounted from library/ubuntu 
+2018.11.23: digest: sha256:5b627b03964866e45e4040cc75b1fcb3a53052227ace4ca43206476667a5bfdb size: 1362
+```
+- You can see in your uploaded image in `dockerhub` repository. 
 
 ### TO DO:
 - Check if `nginx` server is installed and running. 
