@@ -83,7 +83,7 @@ rbenv ()
     esac
 }
 ```
-- Next execute execute the commands in teh table below:
+- Next execute the commands in the table below:
 
 Command execution                    | Command outcome
 ------------------------------------ | --------------------------------------------------------------
@@ -107,16 +107,6 @@ Command execution                    | Command outcome
 - If the command/s complete successfully the output will display the following:
 
 ```
------> Starting Kitchen (v1.23.2)
------> Setting up <default-ubuntu>...
-       Finished setting up <default-ubuntu> (0m0.00s).
------> Verifying <default-ubuntu>...
-       Loaded tests from {:path=>".vagrant.test.integration.default"} 
-
-Profile: tests from {:path=>"/vagrant/test/integration/default"} (tests from {:path=>".vagrant.test.integration.default"})
-Version: (not specified)
-Target:  ssh://kitchen@localhost:32789
-
   System Package nginx
      ✔  should be installed
 
