@@ -87,7 +87,6 @@ rbenv ()
 
 Command execution                    | Command outcome
 ------------------------------------ | --------------------------------------------------------------
-
 `rbenv install 2.3.1` | to install `ruby 2.3.1` version.
 `rbenv local 2.3.1` | to set the default version of `ruby` to your local directory.
 `rbenv -v` |to make sure `ruby` is installed and you have the correct version.
