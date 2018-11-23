@@ -140,7 +140,7 @@ The push refers to a repository [docker.io/nikcbg/nginx64]
 41c002c8a6fd: Mounted from library/ubuntu 
 2018.11.23: digest: sha256:5b627b03964866e45e4040cc75b1fcb3a53052227ace4ca43206476667a5bfdb size: 1362
 ```
-- You can see in your uploaded image in `dockerhub` repository. 
+- You can see your uploaded image in `dockerhub` repository. 
 
 ### TO DO:
 - Check if `nginx` server is installed and running. 
