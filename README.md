@@ -7,7 +7,7 @@
 
 File name                            | File description 
 ------------------------------------ | --------------------------------------------------------------
-`scripts/provision.sh` | script that installs Ubuntu-xenial.
+`scripts/provision.sh` | script that installs `docker`
 `.gitignore` | which files and directories to ignore in the repository.
 `Vagrantfile` | file with sript that isntalls `docker` and `packer` on the Ubuntu-xenial VM.
 `template.json` | template with code for `packer` tool to create `docker` image and install `nginx`.
