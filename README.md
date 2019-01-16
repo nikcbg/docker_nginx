@@ -60,7 +60,6 @@ Build 'docker' finished.
 Command execution                    | Command outcome
 ------------------------------------ | --------------------------------------------------------------
 `gem install bundler` | to install `gem` which is package manager for `ruby`.
-`cd /vagrant`  | to go into `vagrant` directory.
 `bundle install` |  to install `kitchen` framework.
 
 
